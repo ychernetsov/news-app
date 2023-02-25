@@ -2,7 +2,12 @@
   "name": "data-snipper",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx run news-app:serve",
+    "test": "nx test",
+    "server": "nx exec -- node ./server/server.js"
+  },
+
   "private": true,
   "devDependencies": {
     "@babel/preset-react": "^7.14.5",
