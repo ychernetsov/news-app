@@ -1,12 +1,16 @@
 import styles from './button.module.scss';
+import { Chevron } from '@data-snipper/icons';
 
 /* eslint-disable-next-line */
-export interface ButtonProps {}
+export interface ButtonProps {
+  text: string;
+}
 
-export function Button(props: ButtonProps) {
+export function Button({text}: ButtonProps) {
   return (
     <div className={styles['container']}>
-      <h1>Welcome to Button!</h1>
+      <button>{text}<Chevron /></button>
+      
     </div>
   );
 }

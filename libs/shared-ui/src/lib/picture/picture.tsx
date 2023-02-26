@@ -1,12 +1,19 @@
 import styles from './picture.module.scss';
 
 /* eslint-disable-next-line */
-export interface PictureProps {}
+export interface PictureProps {
+  src: string;
+  caption: string;
+  alt: string;
+}
 
-export function Picture(props: PictureProps) {
+export function Picture({src, caption, alt}: PictureProps) {
   return (
     <div className={styles['container']}>
-      <h1>Welcome to Picture!</h1>
+      <img src={src} alt={alt}></img>
+      <div className={styles['caption']}>
+        {caption}
+      </div>
     </div>
   );
 }

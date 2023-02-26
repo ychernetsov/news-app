@@ -1,7 +1,83 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0.875rem;
+
+    ul {
+        list-style: none;
+        position: relative;
+        height: fit-content;
+        padding-right: 1rem;
+      }
+      
+      ul li::before {
+        position: absolute;
+        top: 50%;
+        left: -1rem;
+        display: block;
+        width: 0;
+        height: 100%;
+        content: "";
+        border-left: 1px dashed var(--app-grey);
+        transform: translateY(5px);
+        
+      }
+
+      ul li:last-child::before {
+        height: 50%;
+      }
+
+
+      ul li::after {
+        position: absolute;
+        top: 50%;
+        left: -1rem;
+        display: block;
+        width: 0.313rem;
+        height: 0.313rem;
+        content: "";
+        background-color: var(--app-grey);
+        border-radius: 50%;
+        transition: all .4s ease-in-out;
+        transform: translateY(-50%) translateX(-50%);
+      }
+
+      ul::before {
+        position: absolute;
+        bottom: 0;
+        left: 0.5rem;
+        width: 0.25rem;
+        height: 0.313rem;
+        content: "";
+        border-top: 1px solid var(--app-grey);
+        border-bottom: 1px solid var(--app-grey);
+        transform: skewY(20deg);
+      }
+      
+      .rest::before {
+        bottom: 0;
+        top: 0;
+        transform: skewY(160deg);
+      }
+
+      .rest li::before {
+        top: -80%;
+      }
+
+      .rest li:last-child::before {
+        height: 100%;
+      }
+
+      .rest li:first-child::before {
+        height: 50%;
+        top: -9px;
+      }
+}
+
+.button-container {
+    height: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+

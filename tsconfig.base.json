@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@data-snipper/icons": ["libs/icons/src/index.ts"],
       "@data-snipper/news-main": ["libs/news-main/src/index.ts"],
       "@data-snipper/news-timeline": ["libs/news-timeline/src/index.ts"],
       "@data-snipper/shared-ui": ["libs/shared-ui/src/index.ts"]

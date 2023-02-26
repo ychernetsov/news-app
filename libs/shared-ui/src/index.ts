@@ -1,4 +1,5 @@
-export * from './lib/icon-svg/icon-svg';
+export * from './lib/divider/divider';
+export * from './lib/news-list-main/news-list-main';
 export * from './lib/svg-button/svg-button';
 export * from './lib/button/button';
 export * from './lib/custom-text/custom-text';

@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import IconSvg from './icon-svg';
+import Divider from './divider';
 
-describe('IconSvg', () => {
+describe('Divider', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<IconSvg />);
+    const { baseElement } = render(<Divider />);
     expect(baseElement).toBeTruthy();
   });
 });

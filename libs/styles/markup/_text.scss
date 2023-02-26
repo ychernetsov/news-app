@@ -1,0 +1,26 @@
+@use '../mixins/texts';
+
+h1,
+.app-text_h1 {
+    @include texts.app-text_h1;
+}
+
+h2,
+.app-text_h2 {
+    @include texts.app-text_h2;
+}
+
+h3,
+.app-text_h3 {
+    @include texts.app-text_h3;
+}
+
+h4,
+.app-text_h4 {
+    @include texts.app-text_h4;
+}
+
+h5,
+.app-text_h5 {
+    @include texts.app-text_h5;
+}

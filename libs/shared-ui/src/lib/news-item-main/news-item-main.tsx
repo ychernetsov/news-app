@@ -1,13 +1,22 @@
 import styles from './news-item-main.module.scss';
 
-/* eslint-disable-next-line */
-export interface NewsItemMainProps {}
+export interface NewsItemMainInterface {
+  // id: number;
+  // popilarity: number;
+  title: string;
+  // timestamp: string;
+}
 
-export function NewsItemMain(props: NewsItemMainProps) {
+/* eslint-disable-next-line */
+export interface NewsItemMainProps {
+  title: string;
+}
+
+export function NewsItemMain({title}: NewsItemMainProps) {
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to NewsItemMain!</h1>
-    </div>
+    <li className={styles['list-item']}>
+      <span>{title}</span>
+    </li>
   );
 }
 

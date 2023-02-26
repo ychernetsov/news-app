@@ -1,14 +1,16 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.scss';
+import React from 'react';
 
-import NxWelcome from './nx-welcome';
+import { NewsMain } from '@data-snipper/news-main';
+import { NewsTimeline } from '@data-snipper/news-timeline';
 
 export function App() {
   return (
     <>
-      <NxWelcome title="news-app" />
-
-      <div />
+    <div className="app-layout">
+        <NewsMain />
+        <NewsTimeline />
+      </div>
     </>
   );
 }

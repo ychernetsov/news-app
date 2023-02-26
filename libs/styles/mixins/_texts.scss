@@ -1,0 +1,19 @@
+@mixin app-text_h1 {
+    font: var(--app-font-heading-1);
+}
+
+@mixin app-text_h2 {
+    font: var(--app-font-heading-2);
+}
+
+@mixin app-text_h3 {
+    font: var(--app-font-heading-3);
+}
+
+@mixin app-text_h4 {
+    font: var(--app-font-heading-4);
+}
+
+@mixin app-text_h5 {
+    font: var(--app-font-heading-5);
+}

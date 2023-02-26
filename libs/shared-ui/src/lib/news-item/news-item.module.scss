@@ -1,7 +1,28 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+.content {
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr;
+    margin: 0.825rem 0;
+
+    svg {
+        width: .5rem;;
+        height: 100%;
+    }
+}
+
+li {
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+        opacity: .5;
+    }
+}
+
+.date {
+    align-self: center ;
+    color: var(--app-grey);
+}
+
+.title {
+    padding-right: 0.25rem;
+}

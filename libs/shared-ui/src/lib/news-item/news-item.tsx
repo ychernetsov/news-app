@@ -1,13 +1,20 @@
 import styles from './news-item.module.scss';
+import { Chevron } from '@data-snipper/icons';
 
 /* eslint-disable-next-line */
-export interface NewsItemProps {}
+export interface NewsItemProps {
+  title: string;
+}
 
-export function NewsItem(props: NewsItemProps) {
+export function NewsItem({ title }: NewsItemProps) {
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to NewsItem!</h1>
-    </div>
+    <li>
+      <div className={styles['content']}>
+        <div className={styles['date']}>date</div>
+        <div className={styles['title']}>{title}</div>
+        <Chevron />
+      </div>
+    </li>
   );
 }
 

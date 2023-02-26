@@ -1,7 +1,22 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+.list-item {
+
+    position: relative;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+
+.list-item span {
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        display: block; 
+        bottom: -4px;
+    } 
+
+    &:hover:after {
+        border-bottom: 1px dashed var(--app-grey);
+    }
+}

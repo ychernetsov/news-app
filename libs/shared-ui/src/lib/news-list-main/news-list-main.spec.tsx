@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import NewsTimeline from './news-timeline';
+import NewsListMain from './news-list-main';
 
-describe('NewsTimeline', () => {
+describe('NewsListMain', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<NewsTimeline />);
+    const { baseElement } = render(<NewsListMain />);
     expect(baseElement).toBeTruthy();
   });
 });

@@ -1,7 +1,33 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+@use 'libs/styles/mixins/texts';
+@use 'libs/styles/mixins/breakpoints';
+
+
+.container {
+    width: 100%;
+    position: relative;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.caption {
+    @include texts.app-text_h2;
+
+    color: var(--app-white);
+    position: absolute;
+    bottom: .5rem;
+    text-align: center;
+    width: 100%;
+    padding: .75rem;
+
+    @include breakpoints.media-breakpoint-down('xs') {
+        @include texts.app-text_h3;
+    }
+}

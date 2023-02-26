@@ -1,13 +1,14 @@
-import styles from './news-timeline.module.scss';
+import { NewsList } from '@data-snipper/shared-ui';
 
-/* eslint-disable-next-line */
-export interface NewsTimelineProps {}
+const news = [
+  { title: 'The purpose of lorem ipsum is to create a natural looking block' },
+  { title: 'from the layout. A practice not without controversy, laying out' },
+  { title: 'pages with meaningless filler text can be very useful when the' }
+]
 
-export function NewsTimeline(props: NewsTimelineProps) {
+export function NewsTimeline() {
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to NewsTimeline!</h1>
-    </div>
+    <NewsList news={news} />
   );
 }
 

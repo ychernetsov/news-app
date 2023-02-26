@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx run news-app:serve",
+    "start": "nx serve news-app",
     "test": "nx test",
     "server": "nx exec -- node ./server/server.js"
   },

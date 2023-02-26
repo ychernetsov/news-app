@@ -16,7 +16,11 @@
         "main": "apps/news-app/src/main.tsx",
         "tsConfig": "apps/news-app/tsconfig.app.json",
         "assets": ["apps/news-app/src/favicon.ico", "apps/news-app/src/assets"],
-        "styles": ["apps/news-app/src/styles.scss"],
+        "styles": [
+          "apps/news-app/src/styles.scss",
+          "libs/styles/app-global.scss",
+          "libs/styles/app-theme.scss"
+        ],
         "scripts": [],
         "isolatedConfig": true,
         "webpackConfig": "apps/news-app/webpack.config.js"

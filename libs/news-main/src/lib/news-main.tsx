@@ -1,15 +1,21 @@
 import styles from './news-main.module.scss';
 
-/* eslint-disable-next-line */
-export interface NewsMainProps {
-  title: string;
-}
+import { Picture, NewsListMain } from '@data-snipper/shared-ui';
 
-export function NewsMain(props: NewsMainProps) {
+const news = [
+  { title: 'The purpose of lorem ipsum is to create a natural looking block' },
+  { title: 'from the layout. A practice not without controversy, laying out' },
+  { title: 'pages with meaningless filler text can be very useful when the' }
+]
+
+export function NewsMain() {
   return (
+    <>
     <div className={styles['container']}>
-      <h1>Welcome to NewsMain!</h1>
+      <Picture src={'assets/main_image.webp'} caption={'some very long interesting caption'} alt={'alt'} />
+      <NewsListMain news={news} />
     </div>
+    </>
   );
 }
 
