@@ -1,12 +1,9 @@
 import React from "react";
 import * as ReactDOM from 'react-dom/client';
 import {
-  BrowserRouter,
-  createBrowserRouter,
-  RouterProvider,
+  BrowserRouter
 } from "react-router-dom";
 
-import { NewsItemDetails } from '@data-snipper/news-item-details';
 
 import App from './app/app';
 

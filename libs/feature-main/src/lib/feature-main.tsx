@@ -1,20 +1,26 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 
 import { NewsMain } from '@data-snipper/news-main';
 import { NewsTimeline } from '@data-snipper/news-timeline';
-import { Store, getNews } from '@data-snipper/store';
+import { Store, getNewsAction } from '@data-snipper/store';
 
 const getTimeInMs = (time: string): number => new Date(time).getTime();
 
 export function FeatureMain() {
   const dispatch = useDispatch();
+  const firstEffectRan = useRef(false)
   
   useEffect(() => {
-    //@ts-ignore
-    dispatch(getNews());
-  }, [dispatch]);
+    if (firstEffectRan.current) {
+      //@ts-ignore
+      dispatch(getNewsAction());    
+    }
+    return () => {
+      firstEffectRan.current = true
+    }    
+  }, []);
 
   const news = useSelector((state: Store) => state.news);
 

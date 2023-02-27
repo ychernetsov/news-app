@@ -1,13 +1,8 @@
-import axios from 'axios';
-
-const getNews = async () => {
-  const response = await axios.get('http://localhost:8000/news', {
-    headers: {
-      ContentType: 'application/json',
-    }
+export const getNews = async (): Promise<Response> => {
+  return await fetch('http://localhost:8000/news', {
+      method: 'GET',
+      headers: {
+          'Content-Type': 'application/json'
+      }
   });
-
-  return response.data;
 };
-
-export default getNews;

@@ -11,14 +11,14 @@ const verticalPoints = {
 
 const getContainerHeight = (screenHeight: number): string => {
   if (screenHeight > verticalPoints.xl) {
-    return '85%';
+    return '65%';
   }
   if (screenHeight >= verticalPoints.lg) {
-    return '56rem';
+    return '55rem';
   }
 
   if (screenHeight >= verticalPoints.sm) {
-    return '47rem';
+    return '42rem';
   }
 
   return '100%';
@@ -46,7 +46,7 @@ export function NewsList({ news }: NewsListProps) {
 
       <ul className={styles['rest']}>
         {news.map(newsItem =>
-          <NewsItem item={newsItem} />
+          <NewsItem key={newsItem.id} item={newsItem} />
         )}
       </ul>
 
