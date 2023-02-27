@@ -1,18 +1,18 @@
 import styles from './news-main.module.scss';
 
 import { Picture, NewsListMain } from '@data-snipper/shared-ui';
+import { NewsItem } from '@data-snipper/store';
 
-const news = [
-  { title: 'The purpose of lorem ipsum is to create a natural looking block' },
-  { title: 'from the layout. A practice not without controversy, laying out' },
-  { title: 'pages with meaningless filler text can be very useful when the' }
-]
+/* eslint-disable-next-line */
+export interface NewsMainProps {
+  news: NewsItem[];
+}
 
-export function NewsMain() {
+export function NewsMain({ news }: NewsMainProps) {
   return (
     <>
     <div className={styles['container']}>
-      <Picture src={'assets/main_image.webp'} caption={'some very long interesting caption'} alt={'alt'} />
+      <Picture src={'assets/main_image.webp'} caption={news[0]} alt={'alt'} />
       <NewsListMain news={news} />
     </div>
     </>

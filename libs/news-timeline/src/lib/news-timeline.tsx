@@ -1,12 +1,13 @@
 import { NewsList } from '@data-snipper/shared-ui';
+import { NewsItem } from '@data-snipper/store';
 
-const news = [
-  { title: 'The purpose of lorem ipsum is to create a natural looking block' },
-  { title: 'from the layout. A practice not without controversy, laying out' },
-  { title: 'pages with meaningless filler text can be very useful when the' }
-]
 
-export function NewsTimeline() {
+/* eslint-disable-next-line */
+export interface NewsTimelineProps {
+  news: NewsItem[];
+}
+
+export function NewsTimeline({ news }: NewsTimelineProps) {
   return (
     <NewsList news={news} />
   );
