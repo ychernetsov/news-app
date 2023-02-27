@@ -1,10 +1,10 @@
 import { NewsList } from '@data-snipper/shared-ui';
-import { NewsItem } from '@data-snipper/store';
+import { NewsItemInterface } from '@data-snipper/store';
 
 
 /* eslint-disable-next-line */
 export interface NewsTimelineProps {
-  news: NewsItem[];
+  news: NewsItemInterface[];
 }
 
 export function NewsTimeline({ news }: NewsTimelineProps) {

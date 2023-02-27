@@ -1,19 +1,19 @@
 import styles from './news-list.module.scss';
-import { NewsItemMainInterface } from '@data-snipper/shared-ui';
+import { NewsItemInterface } from '@data-snipper/store';
 import { Button, Divider } from '@data-snipper/shared-ui';
 import NewsItem from '../news-item/news-item';
 
 /* eslint-disable-next-line */
 export interface NewsListProps {
-  news: NewsItemMainInterface[];
+  news: NewsItemInterface[];
 }
 
-export function NewsList({news}: NewsListProps) {
+export function NewsList({ news }: NewsListProps) {
   return (
     <div className={styles['container']}>
       <ul className={styles['popular']}>
         {news.map(newsItem => 
-          <NewsItem title={newsItem.title} />
+          <NewsItem key={newsItem.id} item={newsItem} />
         )}
       </ul>
 
@@ -23,7 +23,7 @@ export function NewsList({news}: NewsListProps) {
 
       <ul className={styles['rest']}>
         {news.map(newsItem => 
-          <NewsItem title={newsItem.title} />
+          <NewsItem item={newsItem} />
         )}
       </ul>
 

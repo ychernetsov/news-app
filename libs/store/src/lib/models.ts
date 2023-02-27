@@ -1,9 +1,12 @@
-export interface NewsItem {
+export interface NewsItemInterface {
+    id: number;
+    timestamp: string;
     title: string;
+    popularity: number;
 }
 
 export interface Store {
-    news: NewsItem[];
+    news: NewsItemInterface[];
     loading: boolean | null;
     error: Error | null;
   }

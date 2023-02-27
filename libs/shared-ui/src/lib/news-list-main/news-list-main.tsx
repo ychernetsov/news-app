@@ -1,13 +1,12 @@
-import { NewsItemMainInterface } from '@data-snipper/shared-ui';
 import NewsItemMain from '../news-item-main/news-item-main';
-import NewsItem from '../news-item/news-item';
+import { NewsItemInterface } from '@data-snipper/store';
 import styles from './news-list-main.module.scss';
 
 
 
 /* eslint-disable-next-line */
 export interface NewsListMainProps {
-  news: NewsItemMainInterface[];
+  news: NewsItemInterface[];
 }
 
 export function NewsListMain({ news }: NewsListMainProps) {

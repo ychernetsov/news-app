@@ -1,19 +1,29 @@
 import styles from './news-item.module.scss';
 import { Chevron } from '@data-snipper/icons';
+import { Link } from 'react-router-dom';
+import { NewsItemInterface } from '@data-snipper/store';
 
-/* eslint-disable-next-line */
-export interface NewsItemProps {
-  title: string;
-}
+const getTime = (date: string | undefined): string => {
+  if (!date) {
+    return '';
+  }
+  const dateObject = new Date(date)
+  const hours = dateObject.getHours();
+  const minutes = dateObject.getMinutes();
 
-export function NewsItem({ title }: NewsItemProps) {
+   return `${hours}:${minutes}`;
+};
+
+export function NewsItem({ item }: { item: Partial<NewsItemInterface> }) {
   return (
     <li className={styles['list-item']}>
+      <Link to={`/${item.id}`}>
       <div className={styles['content']}>
-        <div className={styles['date']}>date</div>
-        <div className={styles['title']}>{title}</div>
+        <div className={styles['date']}>{getTime(item.timestamp)}</div>
+        <div className={styles['title']}>{item.title}</div>
         <Chevron />
       </div>
+      </Link>
     </li>
   );
 }

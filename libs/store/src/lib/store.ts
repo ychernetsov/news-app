@@ -38,6 +38,4 @@ function newsReducer(
   }
 }
 
-const store = createStore(newsReducer, applyMiddleware(thunk));
-
-export default store;
+export const newsStore = createStore(newsReducer, applyMiddleware(thunk));

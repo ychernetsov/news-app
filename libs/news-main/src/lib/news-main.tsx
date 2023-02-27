@@ -1,18 +1,18 @@
 import styles from './news-main.module.scss';
 
 import { Picture, NewsListMain } from '@data-snipper/shared-ui';
-import { NewsItem } from '@data-snipper/store';
+import { NewsItemInterface } from '@data-snipper/store';
 
 /* eslint-disable-next-line */
 export interface NewsMainProps {
-  news: NewsItem[];
+  news: NewsItemInterface[];
 }
 
 export function NewsMain({ news }: NewsMainProps) {
   return (
     <>
     <div className={styles['container']}>
-      <Picture src={'assets/main_image.webp'} caption={news[0]} alt={'alt'} />
+      <Picture src={'assets/main_image.webp'} caption={news[0]?.title} alt={'alt'} />
       <NewsListMain news={news} />
     </div>
     </>

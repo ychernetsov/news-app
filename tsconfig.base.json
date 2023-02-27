@@ -16,7 +16,14 @@
     "baseUrl": ".",
     "paths": {
       "@data-snipper/core": ["libs/core/src/index.ts"],
+      "@data-snipper/feature-main": ["libs/feature-main/src/index.ts"],
+      "@data-snipper/feature-news-item-details": [
+        "libs/feature-news-item-details/src/index.ts"
+      ],
       "@data-snipper/icons": ["libs/icons/src/index.ts"],
+      "@data-snipper/news-item-details": [
+        "libs/news-item-details/src/index.ts"
+      ],
       "@data-snipper/news-main": ["libs/news-main/src/index.ts"],
       "@data-snipper/news-timeline": ["libs/news-timeline/src/index.ts"],
       "@data-snipper/shared-ui": ["libs/shared-ui/src/index.ts"],
