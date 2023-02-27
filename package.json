@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nx serve news-app",
     "test": "nx test",
-    "server": "nx exec -- node ./server/server.js"
+    "server": "cd server/ && node server.js",
+    "dev": "cd server/ && node server.js & nx serve news-app"
   },
   "private": true,
   "devDependencies": {
@@ -32,6 +33,7 @@
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
     "babel-jest": "28.1.1",
+    "concurrently": "^7.6.0",
     "cypress": "^12.2.0",
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",

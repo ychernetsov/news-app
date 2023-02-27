@@ -2,12 +2,10 @@ import styles from './news-list.module.scss';
 import { NewsItemInterface } from '@data-snipper/store';
 import { Button, Divider } from '@data-snipper/shared-ui';
 import NewsItem from '../news-item/news-item';
-import { useEffect } from 'react';
 
 const verticalPoints = {
   'xl': 1080,
   'lg': 900,
-  'md': 864,
   'sm': 768
 }
 
@@ -16,14 +14,11 @@ const getContainerHeight = (screenHeight: number): string => {
     return '85%';
   }
   if (screenHeight >= verticalPoints.lg) {
-    return '65%';
-  }
-  if (screenHeight >= verticalPoints.md) {
-    return '55%';
+    return '56rem';
   }
 
   if (screenHeight >= verticalPoints.sm) {
-    return '45%';
+    return '47rem';
   }
 
   return '100%';
@@ -35,17 +30,8 @@ export interface NewsListProps {
 }
 
 export function NewsList({ news }: NewsListProps) {
-  let screenHeight = window.screen.height;
-  const handler = (e: any) => {
-    screenHeight = e.target.screen.height;
-    console.log(screenHeight)
-  }
-  useEffect(() => {
-    window.addEventListener('resize', handler);
-    return () => {
-      window.removeEventListener('resize', handler);
-    }
-  }, [])
+  const screenHeight = window.screen.height;
+
   return (
     <div className={styles['container']} style={{ maxHeight: getContainerHeight(screenHeight) }}>
       <ul className={styles['popular']}>
