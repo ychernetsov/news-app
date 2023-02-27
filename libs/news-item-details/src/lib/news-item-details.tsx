@@ -6,8 +6,8 @@ import { useSelector } from 'react-redux';
 
 export function NewsItemDetails() {
   const { id } = useParams();
-  if (id) {
-    const newsItem = useSelector((state: Store) => state.news).filter(item => item.id === id)[0];
+  const newsItem = useSelector((state: Store) => state.news).filter(item => item.id === id)[0];
+  if (newsItem) {
     return (
       <div className={styles['container']}>
         <h1>{newsItem?.title}</h1>

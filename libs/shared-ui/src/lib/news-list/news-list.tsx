@@ -11,8 +11,9 @@ const verticalPoints = {
 
 const getContainerHeight = (screenHeight: number): string => {
   if (screenHeight > verticalPoints.xl) {
-    return '65%';
+    return '65rem';
   }
+  
   if (screenHeight >= verticalPoints.lg) {
     return '55rem';
   }

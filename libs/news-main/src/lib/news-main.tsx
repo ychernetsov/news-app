@@ -10,12 +10,10 @@ export interface NewsMainProps {
 
 export function NewsMain({ news }: NewsMainProps) {
   return (
-    <>
     <div className={styles['container']}>
       <Picture src={'assets/main_image.webp'} caption={news[0]?.title} alt={'alt'} />
       <NewsListMain news={news} />
     </div>
-    </>
   );
 }
 
