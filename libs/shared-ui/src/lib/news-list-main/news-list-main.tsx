@@ -14,7 +14,7 @@ export function NewsListMain({ news }: NewsListMainProps) {
     <div className={styles['container']}>
       <ul>
         {news.map(newsItem => 
-          <NewsItemMain title={newsItem.title} />
+          <NewsItemMain id={newsItem.id} title={newsItem.title} />
         )}
       </ul>
     </div>

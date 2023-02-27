@@ -1,5 +1,5 @@
 export interface NewsItemInterface {
-    id: number;
+    id: string;
     timestamp: string;
     title: string;
     popularity: number;

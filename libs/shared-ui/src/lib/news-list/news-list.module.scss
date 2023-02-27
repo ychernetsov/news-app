@@ -2,12 +2,15 @@
     display: grid;
     grid-template-columns: 1fr;
     margin: 0.875rem;
+    overflow: hidden;
 
     ul {
         list-style: none;
         position: relative;
         height: fit-content;
         padding-right: 1rem;
+        max-height: 90%;
+        overflow: hidden;
       }
       
       ul li::before {
@@ -79,5 +82,4 @@
     width: 100%;
     text-align: center;
 }
-
 

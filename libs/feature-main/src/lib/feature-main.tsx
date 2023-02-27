@@ -20,7 +20,7 @@ export function FeatureMain() {
 
   const sorted = news.sort((a, b) => a.popularity - b.popularity);
   const popular = sorted.slice(10);
-  const rest = sorted.slice(11, sorted.length - 1).sort((a, b) => getTimeInMs(a.timestamp) - getTimeInMs(a.timestamp));
+  const rest = sorted.sort((a, b) => getTimeInMs(a.timestamp) - getTimeInMs(b.timestamp));
 
   return (
       <div className="app-layout">
